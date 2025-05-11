@@ -1,0 +1,23 @@
+/vocal-separator-app
+│
+├── /frontend         # React.js App (الواجهة الأمامية)
+│   ├── public/
+│   ├── src/
+│   │   ├── components/
+│   │   │   ├── UploadComponent.jsx
+│   │   │   ├── WaveformPlayer.jsx
+│   │   │   └── DownloadButtons.jsx
+│   │   ├── i18n.js
+│   │   ├── App.js
+│   │   └── main.jsx
+│   ├── package.json
+│   ├── tailwind.config.js
+│   └── vite.config.js     # أو webpack.config.js حسب استخدامك
+│
+├── /backend            # FastAPI Server (الواجهة الخلفية)
+│   ├── main.py
+│   ├── demucs_utils.py
+│   ├── requirements.txt
+│   └── firebase_setup.py
+│
+└── README.md

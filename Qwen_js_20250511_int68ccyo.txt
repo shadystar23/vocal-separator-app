@@ -1,0 +1,35 @@
+import React, { useState } from 'react';
+import UploadComponent from './components/UploadComponent';
+import WaveformPlayer from './components/WaveformPlayer';
+import DownloadButtons from './components/DownloadButtons';
+import i18n from './i18n';
+import './App.css';
+
+function App() {
+  const [vocalsUrl, setVocalsUrl] = useState(null);
+  const [musicUrl, setMusicUrl] = useState(null);
+
+  const handleProcessedAudio = (vocals, music) => {
+    setVocalsUrl(vocals);
+    setMusicUrl(music);
+  };
+
+  return (
+    <div className="bg-black text-white min-h-screen flex flex-col items-center justify-center p-4">
+      <h1 className="text-4xl mb-4 font-bold">{i18n.t("title")}</h1>
+      <p className="mb-8 text-center">{i18n.t("description")}</p>
+
+      <UploadComponent onProcessed={handleProcessedAudio} />
+
+      {(vocalsUrl || musicUrl) && (
+        <div className="mt-8 w-full max-w-xl">
+          {vocalsUrl && <WaveformPlayer url={vocalsUrl} color="#6c5ce7" label={i18n.t("vocals")} />}
+          {musicUrl && <WaveformPlayer url={musicUrl} color="#2ecc71" label={i18n.t("music")} />}
+          <DownloadButtons vocals={vocalsUrl} music={musicUrl} />
+        </div>
+      )}
+    </div>
+  );
+}
+
+export default App;

@@ -1,0 +1,16 @@
+/vocal-separator-app
+│
+├── /frontend             # React.js app
+│   ├── public/
+│   ├── src/
+│   │   ├── components/     # Upload, Player, Waveform, Download
+│   │   ├── i18n.js         # إدارة اللغة العربية والإنجليزية
+│   │   └── App.js
+│   └── package.json
+│
+├── /backend              # FastAPI server
+│   ├── main.py            # API Endpoints
+│   ├── demucs_utils.py    # تشغيل نموذج Demucs
+│   └── requirements.txt
+│
+└── README.md
