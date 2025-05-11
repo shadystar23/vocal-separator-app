@@ -1,0 +1,40 @@
+# Node.js dependencies
+node_modules/
+npm-debug.log*
+yarn-error.log*
+
+# Build artifacts
+/build
+/dist
+
+# Firebase service account key (sensitive)
+/backend/serviceAccountKey.json
+
+# Python cache
+__pycache__
+*.pyc
+*.pyo
+*.pyd
+*.db
+
+# OS metadata
+.DS_Store
+Thumbs.db
+
+# Logs and databases
+/logs
+/*.log
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+# Editor directories and files
+.idea/
+.vscode/
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?

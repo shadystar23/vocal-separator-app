@@ -1,0 +1,11 @@
+
+---
+
+#### 🌐 API Endpoints
+
+```md
+## 🌐 API Endpoints
+
+| Method | Endpoint     | Description             |
+|--------|--------------|-------------------------|
+| POST   | /process     | Upload audio for vocal separation |
